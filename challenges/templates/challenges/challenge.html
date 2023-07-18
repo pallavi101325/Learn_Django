@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Challenge</title>
+</head>
+<body>
+    <h1> This months challenge</h1>
+    <!-- django will pick up this content , we will use the third arg(dictionary)
+    DTL also has several features like filters and tags
+    title is a built in feature in DTL 
+    formatting and trans forming the data is done more in templatew thna in views-->
+    <h2>{{mon | title}} challenge </h2>
+    {% if text is not None %}
+    <h2> {{text | title }}</h2> 
+    {% else %}
+    <p> There is nothing to do in this month</p>
+    {% endif %}
+</body>
+</html>
+<!-- we have added challenges folder inside templates 
+ folder because behind the scenes the templates folder
+ of all the apps are combined while compiling the code,
+ and there if two apps have html file with same name then
+ there will be problem to differentiate , so we make a 
+ folder with the name of the app inside the templates
+ folder to put html files -->
